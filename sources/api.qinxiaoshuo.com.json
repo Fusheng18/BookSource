@@ -105,60 +105,6 @@
       "list": "$.gems[*]",
       "name": "$..gem_name",
       "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"其它",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/28/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"搞笑",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/30/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"格斗",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/32/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"纯爱",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/34/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"奇幻",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/63/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"后宫",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/64/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
     }
   ]
 }
