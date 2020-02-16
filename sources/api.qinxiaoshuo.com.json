@@ -1,0 +1,164 @@
+{
+  "name": "亲小说",
+  "url": "api.qinxiaoshuo.com",
+  "version": 101,
+  "search": {
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_keyword/小说/${key}/0",
+      "charset": "UTF-8",
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg",
+      "summary": "$..gem_intro",
+      "detail": "https://api.qinxiaoshuo.com/api/public/get_gem_detail/${$.gem_id}"
+  },
+  "detail": {
+    "name": "$..gem_name",
+    "author": "$..author_name",
+    "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.ore_id}.jpg",
+    "summary": "$..gem_intro",
+    "status": "$..status",
+    "update": "$..last_update_time",
+    "lastChapter": "$..last_update_content_name"
+  },
+  "catalog": {
+      "list": "$..jewels[*]",
+      "orderBy": 0,
+      "booklet": {
+        "name": "$..jewel_name",
+        "list": "$..contents[*]"
+    },
+    "name": "$..content_name",
+    "chapter": "https://api.qinxiaoshuo.com/api/public/get_content/${$.branch_id}/${$.content_id}"
+  },
+  "chapter": {
+      "content": "$.content"
+  },
+  "rank": [
+    {
+        "title":"日轻",
+        "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/1/${page}",
+        "page": 1,
+        "size": 10,
+        "list": "$.gems[*]",
+        "name": "$..gem_name",
+        "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"爱情",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/2/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"魔法",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/3/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"校园",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/4/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"神鬼",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/5/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"冒险",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/13/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"恐怖",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/16/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"侦探",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/26/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"其它",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/28/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"搞笑",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/30/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"格斗",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/32/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"纯爱",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/34/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"奇幻",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/63/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    },
+    {
+      "title":"后宫",
+      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/64/${page}",
+      "page": 1,
+      "size": 10,
+      "list": "$.gems[*]",
+      "name": "$..gem_name",
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+    }
+  ]
+}
