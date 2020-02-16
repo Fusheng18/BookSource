@@ -41,7 +41,8 @@
         "size": 10,
         "list": "$.gems[*]",
         "name": "$..gem_name",
-        "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+        "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg",
+        "detail": "https://api.qinxiaoshuo.com/api/public/get_gem_detail/${$.gem_id}"
     },
     {
       "title":"爱情",
@@ -50,61 +51,8 @@
       "size": 10,
       "list": "$.gems[*]",
       "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"魔法",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/3/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"校园",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/4/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"神鬼",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/5/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"冒险",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/13/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"恐怖",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/16/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
-    },
-    {
-      "title":"侦探",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/26/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
+      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg",
+      "detail": "https://api.qinxiaoshuo.com/api/public/get_gem_detail/${$.gem_id}"
     }
   ]
 }
