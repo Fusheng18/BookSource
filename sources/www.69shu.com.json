@@ -1,0 +1,33 @@
+{
+  "name": "69书吧",
+  "url": "www.69shu.com",
+  "version": 100,
+  "search": {
+      "url": "https://www.69shu.com/modules/pc/search.php@post->searchkey=${key}",
+      "charset": "gbk",
+      "list": ".sk_box:lt(11)",
+      "name": ".sk_xinxi > h3 > a",
+      "author": "p:nth-child(3) > a",
+      "cover": ".sk_img > a > img",
+      "summary": "p.p_nr",
+      "detail": ".sk_caozuo > a:nth-child(1)"
+  },
+  "detail": {
+      "name": ".status > h1 > a",
+      "author": "p.author > em > a",
+      "cover": ".imgbox > a > img",
+      "summary": ".con > div > p@replace->[详细介绍]",
+      "status": ".status > em > span",
+      "update": "p:nth-child(3) > span",
+      "lastChapter": " p:nth-child(4) > a > span",
+      "catalog": "a.button.read"
+  },
+  "catalog": {
+      "list": "div:nth-child(5) > ul > li",
+      "name": "a@replace->我要报错！",
+      "chapter": "a"
+  },
+  "chapter": {
+      "content": ".yd_text2"
+  }
+}

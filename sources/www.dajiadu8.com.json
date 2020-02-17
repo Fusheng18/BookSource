@@ -1,0 +1,32 @@
+{
+  "name": "大家读书院",
+  "url": "www.dajiadu8.com",
+  "version": 100,
+  "search": {
+      "url": "https://www.dajiadu8.com/modules/article/searchab.php@post->searchtype=articlename&searchkey=${key}",
+      "charset": "gbk",
+      "list": "#content > table > tbody > tr:gt(0):lt(11)",
+      "name": "td:nth-child(1) > a",
+      "author": "td:nth-child(3)",
+      "detail": "td:nth-child(1) > a"
+  },
+  "detail": {
+    "name": "span > h1",
+    "author": "td > table > tbody > tr:nth-child(2) > td:nth-child(2)@match->(?<=作 者：)(.+)",
+    "cover": "td:nth-child(2) > img",
+    "summary": "tbody > tr:nth-child(2) > td > table > tbody > tr > td:nth-child(2)@match->(?<=内容简介： )(.+)",
+    "status": "td > table > tbody > tr:nth-child(3) > td:nth-child(2)@match->(?<=文章状态：)(.+)",
+    "update": "td > table > tbody > tr:nth-child(3) > td:nth-child(1)@match->(?<=最后更新：)(.+)",
+    "lastChapter": "tr:nth-child(2) > td > table > tbody > tr > td:nth-child(2) > a",
+    "catalog": "a:matches(点击阅读)"
+},
+  "catalog": {
+      "list": "#booktext > ul > li",
+      "name": "a",
+      "chapter": "a"
+  },
+  "chapter": {
+      "content": "#content1",
+      "filter": ["@span"]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "月色寒",
+  "url": "www.yuesehan.com",
+  "version": 100,
+  "search": {
+      "url": "https://www.yuesehan.com/modules/article/search.php?searchkey=${key}",
+      "charset": "gbk",
+      "list": ".bandListRight > ul > li",
+      "name": ".bandItemLeft > h2 > a",
+      "author": ".bandPhr > span:nth-child(1)",
+      "cover": "p.bandItemLeft > a > img",
+      "summary": "p.bandDesc",
+      "detail": ".bandItemLeft > h2 > a"
+  },
+  "detail": {
+    "name": "meta[property=og:novel:book_name]@attr->content",
+    "author": "meta[property=og:novel:author]@attr->content",
+    "cover": "meta[property=og:image]@attr->content",
+    "summary": "meta[property=og:description]@attr->content",
+    "status": "meta[property=og:novel:status]@attr->content",
+    "update": "meta[property=og:novel:update_time]@attr->content",
+    "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content"
+  },
+  "catalog": {
+      "list": ".chapterCon > ul > li",
+      "name": "a",
+      "chapter": "a"
+  },
+  "chapter": {
+      "content": ".articleCon > p:nth-child(1)",
+      "page": "a:matches(下一页)"
+  }
+}

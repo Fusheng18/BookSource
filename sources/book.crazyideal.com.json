@@ -1,0 +1,62 @@
+{
+  "name": "吾的轻小说",
+  "url": "book.crazyideal.com",
+  "version": 100,
+  "search": {
+      "url": "https://book.crazyideal.com/search.html@post->searchkey=${key}",
+      "charset": "utf-8",
+      "list": "#hism",
+      "name": "h3 > a@attr->title",
+      "author": "em > span:nth-child(4)",
+      "cover": "a > img@attr->_src",
+      "summary": "p.fs16.mb10",
+      "detail": "h3 > a"
+  },
+  "detail": {
+    "name": "meta[property=og:novel:book_name]@attr->content",
+    "author": "meta[property=og:novel:author]@attr->content",
+    "cover": "meta[property=og:image]@attr->content",
+    "summary": "meta[property=og:description]@attr->content",
+    "status": "meta[property=og:novel:status]@attr->content",
+    "update": "meta[property=og:novel:update_time]@attr->content",
+    "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content"
+  },
+  "catalog": {
+      "list": "#chapterList > li",
+      "orderBy": 0,
+      "name": "a > span.vam",
+      "chapter": "a"
+  },
+  "chapter": {
+      "content": "#TextContent",
+      "filter": ["@dt.tp","dt.rd"]
+  },
+  "rank": [
+      {
+          "title": "排行",
+          "url": "https://book.crazyideal.com/top_${key}/${page}.html",
+          "page": 1,
+          "size": 30,
+          "categories": [{"key": "allvisit", "value": "点击榜"}, {"key": "allvote", "value": "推荐榜"}, {"key": "allvipvote", "value": "月票榜"}],
+          "list": "#imgload > ul > li",
+          "name": "a:nth-child(1) > h2",
+          "author": "p > strong:nth-child(1) > span",
+          "cover": "i > img@attr->_src",
+          "summary": "a.fs16",
+          "detail": ".lst-item > a:nth-child(1)"
+      },
+      {
+        "title": "分类",
+        "url": "https://book.crazyideal.com/${key}/${page}.html",
+        "page": 1,
+        "size": 30,
+        "categories": [{"key": "0", "value": "全部分类"}, {"key": "dianji", "value": "电击文库"}, {"key": "fushijian", "value": "富士见文库"}, {"key": "mf", "value": "MF文库J"}, {"key": "fami", "value": "Fami通文库"}, {"key": "ga", "value": "GA文库"}, {"key": "hj", "value": "HJ文库"}, {"key": "yixun", "value": "一迅社"},{"key": "jiying", "value": "集英社"}, {"key": "xiaoxue", "value": "小学馆"}, {"key": "jiangtan", "value": "讲谈社"}, {"key": "shaonv", "value": "少女文库"}, {"key": "other", "value": "其他文库"}, {"key": "youxi", "value": "游戏剧本"}],
+        "list": "#imgload > ul > li",
+        "name": "a:nth-child(1) > h2",
+        "author": "p > strong:nth-child(1) > span",
+        "cover": "i > img@attr->_src",
+        "summary": "a.fs16",
+        "detail": ".lst-item > a:nth-child(1)"
+      }
+  ]
+}

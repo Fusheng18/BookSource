@@ -35,24 +35,14 @@
   },
   "rank": [
     {
-        "title":"日轻",
-        "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/1/${page}",
+        "title":"小说",
+        "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/${key}/${page}",
         "page": 1,
         "size": 10,
+        "categories": [{"key": "1", "value": "日轻"}, {"key": "2", "value": "爱情"}, {"key": "3", "value": "魔法"}, {"key": "4", "value": "校园"}, {"key": "5", "value": "神鬼"}],
         "list": "$.gems[*]",
         "name": "$..gem_name",
-        "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg",
-        "detail": "https://api.qinxiaoshuo.com/api/public/get_gem_detail/${$.gem_id}"
-    },
-    {
-      "title":"爱情",
-      "url": "http://api.qinxiaoshuo.com/api/public/get_gems_by_tag/小说/2/${page}",
-      "page": 1,
-      "size": 10,
-      "list": "$.gems[*]",
-      "name": "$..gem_name",
-      "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg",
-      "detail": "https://api.qinxiaoshuo.com/api/public/get_gem_detail/${$.gem_id}"
+        "cover": "http://static.qinxiaoshuo.com:4000/bookimg/${$.gem_id}.jpg"
     }
   ]
 }

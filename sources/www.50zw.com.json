@@ -1,0 +1,34 @@
+{
+  "name": "武林中文网",
+  "url": "www.50zw.com",
+  "version": 101,
+  "search": {
+      "url": "https://m.50zw.com/modules/article/waps.php?searchkey=${key}",
+      "charset": "gbk",
+      "list": ".list-item:lt(11)",
+      "name": ".article > a:nth-child(1)",
+      "author": "span.mr15@match->(?<=作者:)(.+)",
+      "cover": "a > img",
+      "summary": "span.fs12",
+      "detail": ".article > a:nth-child(1)@replace->https://m.50zw.com->https://www.50zw.com"
+  },
+  "detail": {
+    "name": "meta[property=og:novel:book_name]@attr->content",
+    "author": "meta[property=og:novel:author]@attr->content",
+    "cover": "meta[property=og:image]@attr->content",
+    "summary": "meta[property=og:description]@attr->content",
+    "status": "meta[property=og:novel:status]@attr->content",
+    "update": "meta[property=og:novel:update_time]@attr->content",
+    "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content"
+  },
+  "catalog": {
+      "list": ".chapterlist > li",
+      "name": "a",
+      "chapter": "a@replace->https://www.50zw.com->https://m.50zw.com"
+  },
+  "chapter": {
+      "content": "#nr1",
+      "page": "a:matches(下一页)",
+      "filter": ["@center"]
+  }
+}

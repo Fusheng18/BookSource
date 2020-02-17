@@ -1,0 +1,33 @@
+{
+  "name": "采墨阁",
+  "url": "www.caimoge.com",
+  "version": 100,
+  "search": {
+      "url": "https://www.caimoge.com/search.html@post->searchkey=${key}",
+      "charset": "utf-8",
+      "list": "#sitembox > dl:lt(11)",
+      "name": "h3 > a",
+      "author": "dd.book_other > span:nth-child(1)",
+      "cover": "a > img",
+      "summary": ".book_des",
+      "detail": "h3 > a"
+  },
+  "detail": {
+    "name": "meta[property=og:novel:book_name]@attr->content",
+    "author": "meta[property=og:novel:author]@attr->content",
+    "cover": "meta[property=og:image]@attr->content",
+    "summary": "meta[property=og:description]@attr->content",
+    "status": "meta[property=og:novel:status]@attr->content",
+    "update": "meta[property=og:novel:update_time]@attr->content",
+    "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+    "catalog": "#pdu"
+  },
+  "catalog": {
+      "list": "#readerlists > ul > li",
+      "name": "a",
+      "chapter": "a"
+  },
+  "chapter": {
+      "content": "#content > p"
+  }
+}

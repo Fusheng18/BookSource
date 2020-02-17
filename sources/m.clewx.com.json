@@ -1,0 +1,31 @@
+{
+  "name": "醋溜儿文学",
+  "url": "m.clewx.com",
+  "version": 100,
+  "search": {
+      "url": "http://m.clewx.com/search/keyword/${key}",
+      "charset": "utf-8",
+      "list": ".partlist-info > dl",
+      "name": "a > dt@match->(?<=《)(.+)(?=》)",
+      "author": "p:nth-child(1) > span",
+      "cover": "dd > img",
+      "detail": "a"
+  },
+  "detail": {
+    "name": "meta[property=og:novel:book_name]@attr->content",
+    "author": "meta[property=og:novel:author]@attr->content",
+    "cover": "meta[property=og:image]@attr->content",
+    "summary": "meta[property=og:description]@attr->content",
+    "status": "meta[property=og:novel:status]@attr->content",
+    "update": "meta[property=og:novel:update_time]@attr->content",
+    "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content"
+  },
+  "catalog": {
+      "list": ".con > dl > dd",
+      "name": "a",
+      "chapter": "a"
+  },
+  "chapter": {
+      "content": ".content.fz14 > p"
+  }
+}

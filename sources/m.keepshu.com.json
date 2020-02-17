@@ -1,0 +1,33 @@
+{
+  "name": "追书阁",
+  "url": "m.keepshu.com",
+  "version": 100,
+  "search": {
+      "url": "https://m.keepshu.com/search.php@post->searchkey=${key}",
+      "charset": "gbk",
+      "list": ".app_listBlock_con > ul > li:lt(11)",
+      "name": ".rightBlock_title",
+      "author": ".rightBlock_name@match->(.+)(?= \\|)",
+      "cover": ".leftImage > img",
+      "summary": "span.con",
+      "detail": "a"
+  },
+  "detail": {
+    "name": "meta[property=og:novel:book_name]@attr->content",
+    "author": "meta[property=og:novel:author]@attr->content",
+    "cover": "meta[property=og:image]@attr->content",
+    "summary": "meta[property=og:description]@attr->content",
+    "status": "meta[property=og:novel:status]@attr->content",
+    "update": "meta[property=og:novel:update_time]@attr->content",
+    "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+    "catalog": "a:matches(查看目录)"
+  },
+  "catalog": {
+      "list": "#chapterlist > li",
+      "name": "a > span.content",
+      "chapter": "a"
+  },
+  "chapter": {
+      "content": "#content"
+  }
+}
